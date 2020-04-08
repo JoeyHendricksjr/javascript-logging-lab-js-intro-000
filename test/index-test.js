@@ -10,7 +10,7 @@ describe('index', () => {
 
   it('calls console.error()', done => {
     const spy = expect.spyOn(console, 'error').andCallThrough()
-console.error('HALP')
+
     jsdom.env(html, [src], {
       virtualConsole: jsdom.createVirtualConsole().sendTo(console)
     }, (err, window) => {
@@ -22,7 +22,7 @@ console.error('HALP')
 
   it('calls console.log()', done => {
     const spy = expect.spyOn(console, 'log').andCallThrough()
-console.log('Joey')
+
     jsdom.env(html, [src], {
       virtualConsole: jsdom.createVirtualConsole().sendTo(console)
     }, (err, window) => {
@@ -34,7 +34,7 @@ console.log('Joey')
 
   it('calls console.warn()', done => {
     const spy = expect.spyOn(console, 'warn').andCallThrough()
-console.warn('WARNING')
+
     jsdom.env(html, [src], {
       virtualConsole: jsdom.createVirtualConsole().sendTo(console)
     }, (err, window) => {
